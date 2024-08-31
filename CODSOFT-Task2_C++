@@ -1,0 +1,39 @@
+//simple calculator
+#include <iostream>
+int main() {
+    double x,y;
+    char operation;
+// Input two numbers from the user
+    std::cout << "Enter the first number: ";
+    std::cin >> x;
+    std::cout << "Enter the second number: ";
+    std::cin >> y;
+
+    // Input the operation from the user
+    std::cout << "Enter the operation (+, -, *, /): ";
+    std::cin >> operation;
+
+    // Perform the operation and display the result
+    switch (operation) {
+        case '+':
+            std::cout << "Result: " << x+y << std::endl;
+           break;
+        case '-':
+            std::cout << "Result: " << x-y << std::endl;
+           break;
+        case '*':
+            std::cout << "Result: " << x *y<< std::endl;
+           break;
+        case '/':
+            if (y != 0)
+                std::cout << "Result: " << x / y << std::endl;
+            else
+                std::cout << "Error: Division by zero is not allowed." << std::endl;
+           break;
+        default:
+            std::cout << "Error: Invalid operation. Please enter one of +, -, *, or /." << std::endl;
+    }
+
+    return 0;
+}
+
